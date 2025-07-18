@@ -15,13 +15,21 @@ const App = () => {
   function handleAddedGoal(newGoal){
     setGoals([...goals, newGoal])
   }
+  
+  function handleUpdates(updatedGoal){
+    const updatedGoals=goals.map((goal)=>{
+      return goal.id===updatedGoal.id?updatedGoal : goal
+    })
+    setGoals(updatedGoals)
+
+  }
   return (
     <div>
       <header>
         <h1>Smart Goal Planner</h1>
       </header>
       <main>
-        <GoalList goals={goals} />
+        <GoalList goals={goals} onUpdateGoal={handleUpdates}/>
         <GoalForm onAddGoal={handleAddedGoal} />
   
       </main>

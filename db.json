@@ -2,11 +2,11 @@
   "goals": [
     {
       "id": "1",
-      "name": "Travel to Uganda",
-      "targetAmount": 5000,
+      "name": "Travel to Uganda(Updated)(Updated)",
+      "targetAmount": "8000",
       "category": "Travel",
       "deadline": "2025-10-18",
-      "savedAmount": 800
+      "savedAmount": 7800
     },
     {
       "id": "2",
@@ -40,7 +40,6 @@
       "deadline": "2026-01-05",
       "savedAmount": 4700
     }
-    
   ],
   "deposit": [
     {
