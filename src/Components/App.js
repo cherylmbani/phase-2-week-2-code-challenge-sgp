@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import GoalList from "./GoalList.js"
 
 const App = () => {
-  const [goals, setGoals]=useState(null);
+  const [goals, setGoals]=useState([]);
   useEffect(()=>{
     fetch("http://localhost:3001/goals")
     .then(r=>r.json())
