@@ -9,7 +9,68 @@
             "savedAmount": 800
         },
         {
-            
+            "id": 2,
+            "name": "Emergency Fund",
+            "targetAmount":8000,
+            "category": "Emergency",
+            "deadline": "2025-12-31",
+            "savedAmount": 1700
+        },
+        {
+            "id": 3,
+            "name": "Wedding Fund",
+            "targetAmount":10000,
+            "category": "Personal",
+            "deadline": "2026-12-31",
+            "savedAmount": 2000
+        },
+        {
+            "id": 4,
+            "name": "Moringa CyberSecurity Classes",
+            "targetAmount":5000,
+            "category": "Education",
+            "deadline": "2026-10-18",
+            "savedAmount": 2000
+        },
+        {
+            "id": 4,
+            "name": "Startup Capital",
+            "targetAmount":20000,
+            "category": "Business",
+            "deadline": "2026-01-05",
+            "savedAmount": 4700
+        }
+    ],
+    "deposit":[
+        {
+            "id": 1,
+            "goalId": 1,
+            "amount": 500,
+            "date": "2025-07-20"
+        },
+        {
+            "id": 2,
+            "goalId": 1,
+            "amount": 1000,
+            "date": "2025-09-10"
+        },
+        {
+            "id": 3,
+            "goalId": 2,
+            "amount": 900,
+            "date": "2025-08-01"
+        },
+        {
+            "id": 4,
+            "goalId": 3,
+            "amount": 1500,
+            "date": "2025-05-25"
+        },
+        {
+            "id": 4,
+            "goalId": 4,
+            "amount": 5000,
+            "date": "2025-07-26"
         }
     ]
 
