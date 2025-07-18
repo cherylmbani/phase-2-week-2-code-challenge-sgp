@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Chart from './Chart';
 
 function GoalList({ goals, onUpdateGoal, onDeleteGoal}) {
   const [editingGoalId, setEditingGoalId] = useState(null);
@@ -56,33 +57,13 @@ function GoalList({ goals, onUpdateGoal, onDeleteGoal}) {
       <div key={goal.id} style={{ border: "1px solid #ddd", margin: "10px", padding: "10px" }}>
         {isEditing ? (
           <>
-            <input
-              type="text"
-              name="name"
-              value={editFormData.name}
-              onChange={handleChange}
-              placeholder="Name"
+            <input type="text" name="name" value={editFormData.name} onChange={handleChange} placeholder="Name"
             /><br />
-            <input
-              type="text"
-              name="targetAmount"
-              value={editFormData.targetAmount}
-              onChange={handleChange}
-              placeholder="Target Amount"
+            <input type="text" name="targetAmount" value={editFormData.targetAmount} onChange={handleChange} placeholder="Target Amount"
             /><br />
-            <input
-              type="text"
-              name="category"
-              value={editFormData.category}
-              onChange={handleChange}
-              placeholder="Category"
+            <input type="text" name="category" value={editFormData.category} onChange={handleChange} placeholder="Category"
             /><br />
-            <input
-              type="text"
-              name="deadline"
-              value={editFormData.deadline}
-              onChange={handleChange}
-              placeholder="Deadline"
+            <input type="text" name="deadline" value={editFormData.deadline} onChange={handleChange} placeholder="Deadline"
             /><br />
             <button onClick={() => handleSave(goal.id)}>Save</button>
           </>
@@ -93,12 +74,18 @@ function GoalList({ goals, onUpdateGoal, onDeleteGoal}) {
             <p><b>Category:</b> {goal.category}</p>
             <p><b>Deadline:</b> {goal.deadline}</p>
             <p><b>Saved Amount:</b> {goal.savedAmount}</p>
+            
+            <Chart 
+            targetAmount={Number(goal.targetAmount)}
+            savedAmount={Number(goal.savedAmount)}
+            />
 
             <button onClick={() => startEditing(goal)}>Edit</button>
             <button onClick={()=>handleDelete(goal.id)}>Delete</button>
           </>
         )}
       </div>
+    
     );
   });
 

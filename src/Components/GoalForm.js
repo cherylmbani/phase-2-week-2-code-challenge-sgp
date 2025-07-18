@@ -5,7 +5,8 @@ function GoalForm ({onAddGoal}){
         name:"",
         targetAmount:"",
         category:"",
-        deadline:""
+        deadline:"",
+        savedAmount:""
     })
     function handleFormChange(e){
         const {name, value}=e.target;
@@ -21,9 +22,7 @@ function GoalForm ({onAddGoal}){
             headers: {
                 "Content-Type": "application/json",
             },
-            body:JSON.stringify({
-                ...formData, savedAmount:0,
-            }),
+            body:JSON.stringify(formData),
         })
         .then(r=>r.json())
         .then(newGoal=>{
@@ -32,7 +31,8 @@ function GoalForm ({onAddGoal}){
                 name:"",
                 targetAmount:"",
                 category:"",
-                deadline:""
+                deadline:"",
+                savedAmount:""
             });
         })
     }
@@ -51,6 +51,8 @@ function GoalForm ({onAddGoal}){
             <input type="text" name="category" value={formData.category} onChange={handleFormChange} /><br />
             <label htmlFor="deadline">Deadline</label>
             <input type="text" name="deadline" value={formData.deadline} onChange={handleFormChange} /><br />
+            <label htmlFor="savedAmount">Saved Amount:</label>
+            <input type="text" name="savedAmount" value={formData.savedAmount} onChange={handleFormChange} /><br />
             <button type="submit">Submit</button>
 
         </form>

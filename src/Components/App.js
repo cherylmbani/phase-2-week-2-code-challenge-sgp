@@ -38,6 +38,7 @@ const App = () => {
       <main>
         <GoalList goals={goals} onUpdateGoal={handleUpdates} onDeleteGoal={handleDeleteGoal}/>
         <GoalForm onAddGoal={handleAddedGoal} />
+    
   
       </main>
 
