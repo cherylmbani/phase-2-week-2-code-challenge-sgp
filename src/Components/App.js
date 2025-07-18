@@ -23,13 +23,20 @@ const App = () => {
     setGoals(updatedGoals)
 
   }
+
+  function handleDeleteGoal(deletedGoalId){
+    const deletedGoals=goals.filter((goal)=>{
+      return goal.id!==deletedGoalId
+    })
+    setGoals(deletedGoals);
+  }
   return (
     <div>
       <header>
         <h1>Smart Goal Planner</h1>
       </header>
       <main>
-        <GoalList goals={goals} onUpdateGoal={handleUpdates}/>
+        <GoalList goals={goals} onUpdateGoal={handleUpdates} onDeleteGoal={handleDeleteGoal}/>
         <GoalForm onAddGoal={handleAddedGoal} />
   
       </main>

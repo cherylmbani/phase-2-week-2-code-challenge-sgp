@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function GoalList({ goals, onUpdateGoal }) {
+function GoalList({ goals, onUpdateGoal, onDeleteGoal}) {
   const [editingGoalId, setEditingGoalId] = useState(null);
   const [editFormData, setEditFormData] = useState({
     name: "",
@@ -41,6 +41,16 @@ function GoalList({ goals, onUpdateGoal }) {
 
   const goalsArray = goals.map((goal) => {
     const isEditing = goal.id === editingGoalId;
+
+    function handleDelete(goalId){
+        fetch(`http://localhost:3001/goals/${goalId}`,{
+            method: "DELETE",
+        })
+        .then(r=>r.json())
+        .then(()=>{
+            onDeleteGoal(goalId);
+        })
+    }
 
     return (
       <div key={goal.id} style={{ border: "1px solid #ddd", margin: "10px", padding: "10px" }}>
@@ -83,7 +93,9 @@ function GoalList({ goals, onUpdateGoal }) {
             <p><b>Category:</b> {goal.category}</p>
             <p><b>Deadline:</b> {goal.deadline}</p>
             <p><b>Saved Amount:</b> {goal.savedAmount}</p>
+
             <button onClick={() => startEditing(goal)}>Edit</button>
+            <button onClick={()=>handleDelete(goal.id)}>Delete</button>
           </>
         )}
       </div>
