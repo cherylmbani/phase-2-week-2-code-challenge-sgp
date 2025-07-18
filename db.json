@@ -1,0 +1,16 @@
+{
+    "goals":[
+        {
+            "id": 1,
+            "name": "Travel to Uganda",
+            "targetAmount":5000,
+            "category": "Travel",
+            "deadline": "2025-10-18",
+            "savedAmount": 800
+        },
+        {
+            
+        }
+    ]
+
+}
