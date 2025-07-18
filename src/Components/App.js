@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import GoalList from "./GoalList.js"
+import GoalForm from './GoalForm.js';
 
 const App = () => {
   const [goals, setGoals]=useState([]);
@@ -11,6 +12,9 @@ const App = () => {
       console.log(data);
     })
   }, [])
+  function handleAddedGoal(newGoal){
+    setGoals([...goals, newGoal])
+  }
   return (
     <div>
       <header>
@@ -18,6 +22,8 @@ const App = () => {
       </header>
       <main>
         <GoalList goals={goals} />
+        <GoalForm onAddGoal={handleAddedGoal} />
+  
       </main>
 
     </div>
