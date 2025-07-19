@@ -1,70 +1,175 @@
-# phase-2-week-2-code-challenge-SGP# Getting Started with Create React App
+# Financial Goals Tracker App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple and interactive **React.js application** that helps users **set financial goals**, **track their progress**, and **make deposits** toward each goal. It also provides an **overview** of all goals, including total savings, completed goals, approaching deadlines, and overdue alerts.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Add/Edit/Delete Goals**: Users can create financial goals with name, target amount, category, and deadline.
+- **Progress Chart**: Each goal includes a progress chart showing percentage saved.
+- **Deposit Funds**: Add money toward any goal and update the saved amount instantly.
+- **Overview Section**:
+  - Total number of goals
+  - Total amount saved across all goals
+  - Count of completed goals
+  - Days remaining for each goal
+  - Warnings for goals due in less than 30 days
+  - Overdue alerts for goals past deadline without completion
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+financial-goals-tracker/
+│
+├── public/
+│   └── index.html
+│
+├── src/
+│   ├── components/
+│   │   ├── Chart.js
+│   │   ├── Deposits.js
+│   │   ├── GoalForm.js
+│   │   ├── GoalList.js
+│   │   └── Overview.js
+│   │
+│   ├── pages/
+│   │   └── Goals.js
+│   │
+│   ├── App.js
+│   └── index.js
+│
+├── db.json        # JSON Server data
+├── package.json
+└── README.md
+```
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Frontend**: React (Functional Components + Hooks)
+- **Styling**: Plain CSS 
+- **Backend**: JSON Server (`db.json`)
+- **Tooling**: Create React App (CRA), Fetch API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Follow these steps to set up and run the project locally:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. Create and Clone the Repository
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Go to [GitHub](https://github.com) and create a new repository.
+- Set the repository to **private**.
+- Add your collaborator: `Technical Master` under **Settings > Collaborators**.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Then clone the repo to your local machine:
 
-## Learn More
+```bash
+git clone https://github.com/your-username/phase-2-week-2-code-challenge-sgp.git
+cd phase-2-week-2-financial-challenge-sgp
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> Replace `your-username` with your actual GitHub username.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+### 2. Set Up JSON Server (Backend)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Install JSON Server globally if you haven’t already:
 
-### Analyzing the Bundle Size
+```bash
+npm install -g json-server
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Inside your project folder, create a file named `db.json` and add your mock data:
 
-### Making a Progressive Web App
+```json
+{
+  "goals": [
+    {
+      "id": 1,
+      "name": "Emergency Fund",
+      "targetAmount": 50000,
+      "savedAmount": 12000,
+      "category": "Savings",
+      "deadline": "2025-09-01"
+    },
+  ]
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Run the JSON server:
 
-### Advanced Configuration
+```bash
+json-server --watch db.json --port 3001
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This will serve your goals data at `http://localhost:3001/goals`.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 3. Install Frontend Dependencies
 
-### `npm run build` fails to minify
+Make sure you're inside the project folder, then install React dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm install
+```
+
+---
+
+### 4. Run the React App
+
+Start the development server:
+
+```bash
+npm start
+```
+
+The app should now be live at:
+
+```
+http://localhost:3000
+```
+
+---
+
+## Key Concepts Practiced
+
+- `useState`, `useEffect` for React state management and side effects
+- Controlled form components
+- Fetching data from JSON Server using `fetch()`
+- Using `PATCH`, `POST`, `GET` and `DELETE` HTTP methods
+- Lifting state up and prop-drilling
+- Conditional rendering
+- Array methods:
+  - `.map()`
+  - `.filter()`
+  - `.reduce()`
+- Date/time operations using `new Date()` and comparisons
+
+## License
+
+**MIT License**
+
+Copyright (c) 2025
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+**THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.**
+
+
+
+
+
+
+
