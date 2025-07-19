@@ -22,23 +22,15 @@
       "targetAmount": 20000,
       "category": "Business",
       "deadline": "2026-01-05",
-      "savedAmount": 4700
+      "savedAmount": 5100
     },
     {
       "id": "73c9",
       "name": "Car Purchase",
-      "targetAmount": "9000",
+      "targetAmount": "1000",
       "category": "Personal",
       "deadline": "2025-12-12",
       "savedAmount": 0
-    },
-    {
-      "id": "d55a",
-      "name": "Soft Skills Education",
-      "targetAmount": "11000",
-      "category": "Personal",
-      "deadline": "2025-10-20",
-      "savedAmount": "2000"
     }
   ],
   "deposit": [

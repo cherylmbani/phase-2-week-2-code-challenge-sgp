@@ -81,7 +81,8 @@ function GoalList({ goals, onUpdateGoal, onDeleteGoal}) {
             />
 
             <button onClick={() => startEditing(goal)}>Edit</button>
-            <button onClick={()=>handleDelete(goal.id)}>Delete</button>
+
+            <button style={{marginLeft:"20px"}} onClick={()=>handleDelete(goal.id)}>Delete</button>
           </>
         )}
       </div>

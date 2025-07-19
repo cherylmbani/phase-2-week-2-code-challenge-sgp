@@ -1,44 +1,24 @@
-import React, {useEffect, useState} from 'react'
-import GoalList from "./GoalList.js"
-import GoalForm from './GoalForm.js';
+import React from 'react'
+import {Routes, Route} from "react-router-dom";
+import NavBar from './NavBar';
+import Goals from '../pages/Goals';
+
 
 const App = () => {
-  const [goals, setGoals]=useState([]);
-  useEffect(()=>{
-    fetch("http://localhost:3001/goals")
-    .then(r=>r.json())
-    .then(data=>{
-      setGoals(data);
-      console.log(data);
-    })
-  }, [])
-  function handleAddedGoal(newGoal){
-    setGoals([...goals, newGoal])
-  }
   
-  function handleUpdates(updatedGoal){
-    const updatedGoals=goals.map((goal)=>{
-      return goal.id===updatedGoal.id?updatedGoal : goal
-    })
-    setGoals(updatedGoals)
-
-  }
-
-  function handleDeleteGoal(deletedGoalId){
-    const deletedGoals=goals.filter((goal)=>{
-      return goal.id!==deletedGoalId
-    })
-    setGoals(deletedGoals);
-  }
   return (
     <div>
       <header>
         <h1>Smart Goal Planner</h1>
       </header>
+      <NavBar />
       <main>
-        <GoalList goals={goals} onUpdateGoal={handleUpdates} onDeleteGoal={handleDeleteGoal}/>
-        <GoalForm onAddGoal={handleAddedGoal} />
-    
+        <Routes>
+          <Route path="/goals" element={<Goals />} />
+          
+      
+        </Routes>
+        
   
       </main>
 
