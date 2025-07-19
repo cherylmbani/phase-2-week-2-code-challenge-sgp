@@ -41,7 +41,7 @@ function GoalForm ({onAddGoal}){
         
   return (
     <div>
-        <h2> Add Goal</h2>
+        <h2 style={{color:"#2a9df4"}}> Add Goal</h2>
         <form onSubmit={handleSubmit}>
             <label htmlFor="name">Name:</label>
             <input type="text" name="name" value={formData.name} onChange={handleFormChange} /><br />

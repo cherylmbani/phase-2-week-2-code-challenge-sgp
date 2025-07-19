@@ -11,3 +11,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.goal-card {
+  color: white;
+  background-color: rgb(27, 26, 29);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform o.2s ease;
+
+}
+.goal-card h2 {
+  margin-top: 10px;
+  color: yellowgreen;
+}
+.goal-label {
+  color: rgb(218, 104, 11);
+}
+
+.goal-chart {
+  color: rgb(5, 101, 165);
+}
+.overview {
+  color: #16a085;
+  font-weight: 700;
+  margin-right: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1rem;
+
+}
+.overview-h1 {
+  color: #16a085;
+  font-weight: 500;
+  margin-right: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1rem;
+
+}

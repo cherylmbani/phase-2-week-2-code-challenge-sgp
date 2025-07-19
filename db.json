@@ -3,7 +3,7 @@
     {
       "id": "3",
       "name": "Wedding Fund",
-      "targetAmount": 10000,
+      "targetAmount": "9000",
       "category": "Personal",
       "deadline": "2026-12-31",
       "savedAmount": 2000
@@ -30,7 +30,7 @@
       "targetAmount": "1000",
       "category": "Personal",
       "deadline": "2025-12-12",
-      "savedAmount": 0
+      "savedAmount": 2000
     },
     {
       "id": "8bc9",
@@ -46,7 +46,7 @@
       "targetAmount": "10000",
       "category": "Education",
       "deadline": "2025-06-30",
-      "savedAmount": "7000"
+      "savedAmount": 9000
     }
   ],
   "deposit": [

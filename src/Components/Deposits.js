@@ -36,7 +36,7 @@ function Deposits ({goals, onUpdateGoal}){
     }
   return (
     <div>
-        <h2>Increase Your Savings with Regular Deposits</h2>
+        <h2 style={{color:"#2a9df4"}}>Increase Your Savings with Regular Deposits</h2>
         <form onSubmit={handleSubmit} style={{marginTop:"20px"}}>
             <label htmlFor="goal">Choose a Goal:</label>
             <select id="goal" name="goal" onChange={handleSelectedGoal} value={selectedGoal}>

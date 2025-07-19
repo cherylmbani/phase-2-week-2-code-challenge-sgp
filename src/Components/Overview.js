@@ -39,16 +39,16 @@ function Overview({goals}){
     });
   return (
     <div>
-        <h2>Overview</h2>
-        <p><b>Total number of goals:</b> {goals.length}</p>
-        <p><b>Total Amount Saved:</b> {totalSavings}</p>
-        <p><b>Total Number of Goals Completed:</b> {completedGoal.length}</p>
+        <h2 style={{color:"#2a9df4"}}>Overview</h2>
+        <p><span className='overview'><b>Total number of goals:</b></span> {goals.length}</p>
+        <p><span className='overview'><b>Total Amount Saved:</b></span> {totalSavings}</p>
+        <p><span className='overview'><b>Total Number of Goals Completed:</b> </span>{completedGoal.length}</p>
         
-        <h3>Days Left Per Goal</h3>
+        <h3 >Days Left Per Goal</h3>
         <ul>
             {remainingTime.map((goal,index)=>(
                 <li key={index}>
-                    <b>{goal.name}:</b> {goal.daysLeft} {goal.daysLeft===1?"day":"days"} left
+                    <b className='overview-h1'>{goal.name}:</b> {goal.daysLeft} {goal.daysLeft===1?"day":"days"} left
                 </li>
             ))}
         </ul>

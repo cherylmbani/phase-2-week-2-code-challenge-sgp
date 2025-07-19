@@ -54,7 +54,7 @@ function GoalList({ goals, onUpdateGoal, onDeleteGoal}) {
     }
 
     return (
-      <div key={goal.id} style={{ border: "1px solid #ddd", margin: "10px", padding: "10px" }}>
+      <div key={goal.id}  className="goal-card" style={{ border: "1px solid #ddd", margin: "10px", padding: "10px" }}>
         {isEditing ? (
           <>
             <input type="text" name="name" value={editFormData.name} onChange={handleChange} placeholder="Name"
@@ -70,10 +70,10 @@ function GoalList({ goals, onUpdateGoal, onDeleteGoal}) {
         ) : (
           <>
             <h2>{goal.name}</h2>
-            <p><b>Target Amount:</b> {goal.targetAmount}</p>
-            <p><b>Category:</b> {goal.category}</p>
-            <p><b>Deadline:</b> {goal.deadline}</p>
-            <p><b>Saved Amount:</b> {goal.savedAmount}</p>
+            <p><span className='goal-label'><b>Target Amount:</b></span> {goal.targetAmount}</p>
+            <p><span className='goal-label'><b>Category:</b></span> {goal.category}</p>
+            <p><span className='goal-label'><b>Deadline:</b></span> {goal.deadline}</p>
+            <p><span className='goal-label'><b>Saved Amount:</b></span> {goal.savedAmount}</p>
             
             <Chart 
             targetAmount={Number(goal.targetAmount)}
