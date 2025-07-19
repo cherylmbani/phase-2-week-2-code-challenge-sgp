@@ -31,6 +31,22 @@
       "category": "Personal",
       "deadline": "2025-12-12",
       "savedAmount": 0
+    },
+    {
+      "id": "8bc9",
+      "name": "Rent Deposit",
+      "targetAmount": "3000",
+      "category": "Housing",
+      "deadline": "2025-08-02",
+      "savedAmount": "1000"
+    },
+    {
+      "id": "6d1e",
+      "name": "Online Course Payment",
+      "targetAmount": "10000",
+      "category": "Education",
+      "deadline": "2025-06-30",
+      "savedAmount": "7000"
     }
   ],
   "deposit": [
