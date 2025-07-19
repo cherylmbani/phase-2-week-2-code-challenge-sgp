@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import GoalList from '../Components/GoalList';
 import GoalForm from '../Components/GoalForm';
 import Deposits from '../Components/Deposits';
+import Overview from '../Components/Overview';
 
 function Goals (){
     const [goals, setGoals]=useState([]);
@@ -37,6 +38,8 @@ function Goals (){
         <GoalList goals={goals} onUpdateGoal={handleUpdates} onDeleteGoal={handleDeleteGoal}/>
         <GoalForm onAddGoal={handleAddedGoal} />
         <Deposits goals={goals} onUpdateGoal={handleUpdates} />
+        <Overview goals={goals} />
+
     
         
 

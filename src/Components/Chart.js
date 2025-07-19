@@ -8,9 +8,9 @@ function Chart({targetAmount, savedAmount}){
     <div>
         <br />
 
-        <p><b>Total Saved:</b>{savedAmount}</p>
-        <p><b>Target Amount:</b>{targetAmount}</p>
-        <p><b>Remaining Amount</b>{remaining}</p>
+        <p><b>Total Saved:</b> {savedAmount}</p>
+        <p><b>Target Amount:</b> {targetAmount}</p>
+        <p><b>Remaining Amount:</b> {remaining}</p>
         <div style={{background: "#eee", height:"20px", borderRadius:"10px"}}>
             <div style={{width:`${progressPercent}%`, background:"#4caf50", height:"100%", borderRadius:"10px"}}>{progressPercent}%</div>
 
