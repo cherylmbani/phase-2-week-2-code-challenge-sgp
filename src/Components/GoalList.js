@@ -17,6 +17,7 @@ function GoalList({ goals, onUpdateGoal, onDeleteGoal}) {
       targetAmount: goal.targetAmount,
       category: goal.category,
       deadline: goal.deadline
+      
     });
   }
 
@@ -26,7 +27,8 @@ function GoalList({ goals, onUpdateGoal, onDeleteGoal}) {
   }
 
   function handleSave(goalId) {
-    fetch(`http://localhost:3001/goals/${goalId}`, {
+    
+    fetch(`http://localhost:3001/goals/${Number(goalId)}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -65,6 +67,7 @@ function GoalList({ goals, onUpdateGoal, onDeleteGoal}) {
             /><br />
             <input type="text" name="deadline" value={editFormData.deadline} onChange={handleChange} placeholder="Deadline"
             /><br />
+            
             <button onClick={() => handleSave(goal.id)}>Save</button>
           </>
         ) : (

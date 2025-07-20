@@ -16,13 +16,18 @@ function GoalForm ({onAddGoal}){
     }
     function handleSubmit(e){
         e.preventDefault();
+        const cleanedData={
+            ...formData,
+            targetAmount: Number(formData.targetAmount),
+            savedAmount: Number(formData.savedAmount)
+        }
 
         fetch("http://localhost:3001/goals", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body:JSON.stringify(formData),
+            body:JSON.stringify(cleanedData),
         })
         .then(r=>r.json())
         .then(newGoal=>{
@@ -46,13 +51,13 @@ function GoalForm ({onAddGoal}){
             <label htmlFor="name">Name:</label>
             <input type="text" name="name" value={formData.name} onChange={handleFormChange} /><br />
             <label htmlFor="amount">Target Amount:</label>
-            <input type="text" name="targetAmount" value={formData.targetAmount} onChange={handleFormChange} /><br />
+            <input type="number" name="targetAmount" value={formData.targetAmount} onChange={handleFormChange} /><br />
             <label htmlFor="category">Category:</label>
             <input type="text" name="category" value={formData.category} onChange={handleFormChange} /><br />
             <label htmlFor="deadline">Deadline</label>
             <input type="text" name="deadline" value={formData.deadline} onChange={handleFormChange} /><br />
             <label htmlFor="savedAmount">Saved Amount:</label>
-            <input type="text" name="savedAmount" value={formData.savedAmount} onChange={handleFormChange} /><br />
+            <input type="number" name="savedAmount" value={formData.savedAmount} onChange={handleFormChange} /><br />
             <button type="submit">Submit</button>
 
         </form>

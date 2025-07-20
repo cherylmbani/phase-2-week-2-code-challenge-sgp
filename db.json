@@ -1,84 +1,68 @@
 {
   "goals": [
     {
-      "id": "3",
+      "id": "1",
       "name": "Wedding Fund",
-      "targetAmount": "9000",
+      "targetAmount": 9000,
       "category": "Personal",
       "deadline": "2026-12-31",
       "savedAmount": 2000
     },
     {
-      "id": "4",
+      "id": "2",
       "name": "Moringa CyberSecurity Classes",
-      "targetAmount": 5000,
+      "targetAmount": "7000",
       "category": "Education",
       "deadline": "2026-10-18",
-      "savedAmount": 2000
+      "savedAmount": 3000
     },
     {
-      "id": "5",
+      "id": "3",
       "name": "Startup Capital",
       "targetAmount": 20000,
       "category": "Business",
       "deadline": "2026-01-05",
-      "savedAmount": 5100
+      "savedAmount": 5600
     },
     {
-      "id": "73c9",
+      "id": "4",
       "name": "Car Purchase",
-      "targetAmount": "1000",
+      "targetAmount": 1000,
       "category": "Personal",
       "deadline": "2025-12-12",
       "savedAmount": 2000
     },
     {
-      "id": "8bc9",
+      "id": "5",
       "name": "Rent Deposit",
-      "targetAmount": "3000",
+      "targetAmount": 3000,
       "category": "Housing",
       "deadline": "2025-08-02",
-      "savedAmount": "1000"
+      "savedAmount": 2040
     },
     {
-      "id": "6d1e",
+      "id": "6",
       "name": "Online Course Payment",
-      "targetAmount": "10000",
+      "targetAmount": 10000,
       "category": "Education",
       "deadline": "2025-06-30",
       "savedAmount": 9000
-    }
-  ],
-  "deposit": [
-    {
-      "id": "1",
-      "goalId": 1,
-      "amount": 500,
-      "date": "2025-07-20"
     },
     {
-      "id": "2",
-      "goalId": 1,
-      "amount": 1000,
-      "date": "2025-09-10"
+      "id": "7",
+      "name": "MMF Investment",
+      "targetAmount": 9000,
+      "category": "Business",
+      "deadline": "2028-12-31",
+      "savedAmount": 1500
     },
     {
-      "id": "3",
-      "goalId": 2,
-      "amount": 900,
-      "date": "2025-08-01"
-    },
-    {
-      "id": "4",
-      "goalId": 3,
-      "amount": 1500,
-      "date": "2025-05-25"
-    },
-    {
-      "id": "4",
-      "goalId": 4,
-      "amount": 5000,
-      "date": "2025-07-26"
+      "id": "e73c",
+      "name": "Book Purchase",
+      "targetAmount": 500,
+      "category": "Personal",
+      "deadline": "2025-08-12",
+      "savedAmount": 400
     }
   ]
 }
