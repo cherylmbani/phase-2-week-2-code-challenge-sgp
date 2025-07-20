@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Wedding Fund",
-      "targetAmount": "7000",
+      "targetAmount": "8000",
       "category": "Personal",
       "deadline": "2026-12-31",
       "savedAmount": 2000
@@ -22,7 +22,7 @@
       "targetAmount": 20000,
       "category": "Business",
       "deadline": "2026-01-05",
-      "savedAmount": 5600
+      "savedAmount": 6000
     },
     {
       "id": "4",
@@ -35,7 +35,7 @@
     {
       "id": "5",
       "name": "Rent Deposit",
-      "targetAmount": 3000,
+      "targetAmount": "3500",
       "category": "Housing",
       "deadline": "2025-08-02",
       "savedAmount": 2040
@@ -49,20 +49,12 @@
       "savedAmount": 9000
     },
     {
-      "id": "7",
-      "name": "MMF Investment",
-      "targetAmount": 9000,
-      "category": "Business",
-      "deadline": "2028-12-31",
-      "savedAmount": 1500
-    },
-    {
       "id": "e73c",
       "name": "Book Purchase",
       "targetAmount": 500,
       "category": "Personal",
       "deadline": "2025-08-12",
-      "savedAmount": 400
+      "savedAmount": 450
     },
     {
       "id": "9c1b",
@@ -73,12 +65,12 @@
       "savedAmount": 200
     },
     {
-      "id": "3842",
+      "id": "5c8d",
       "name": "Nairobi City Marathon",
-      "targetAmount": "200",
+      "targetAmount": "400",
       "category": "Personal",
       "deadline": "2025-07-29",
-      "savedAmount": 50
+      "savedAmount": 190
     }
   ]
 }
