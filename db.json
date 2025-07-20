@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Wedding Fund",
-      "targetAmount": 9000,
+      "targetAmount": "7000",
       "category": "Personal",
       "deadline": "2026-12-31",
       "savedAmount": 2000
@@ -43,7 +43,7 @@
     {
       "id": "6",
       "name": "Online Course Payment",
-      "targetAmount": 10000,
+      "targetAmount": "1000",
       "category": "Education",
       "deadline": "2025-06-30",
       "savedAmount": 9000
@@ -63,6 +63,22 @@
       "category": "Personal",
       "deadline": "2025-08-12",
       "savedAmount": 400
+    },
+    {
+      "id": "9c1b",
+      "name": "Sauti Sol Concert",
+      "targetAmount": "900",
+      "category": "Entertainment",
+      "deadline": "2025-12-10",
+      "savedAmount": 200
+    },
+    {
+      "id": "3842",
+      "name": "Nairobi City Marathon",
+      "targetAmount": "200",
+      "category": "Personal",
+      "deadline": "2025-07-29",
+      "savedAmount": 50
     }
   ]
 }

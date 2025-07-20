@@ -28,7 +28,7 @@ function GoalList({ goals, onUpdateGoal, onDeleteGoal}) {
 
   function handleSave(goalId) {
     
-    fetch(`http://localhost:3001/goals/${Number(goalId)}`, {
+    fetch(`http://localhost:3001/goals/${goalId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
