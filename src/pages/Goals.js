@@ -7,7 +7,7 @@ import Overview from '../Components/Overview';
 function Goals (){
     const [goals, setGoals]=useState([]);
   useEffect(()=>{
-    fetch("http://localhost:3001/goals")
+    fetch("https://goal-server-1.onrender.com/goals")
     .then(r=>r.json())
     .then(data=>{
       setGoals(data);
