@@ -140,6 +140,14 @@ http://localhost:3000
 
 ---
 
+## Live Demos
+### FrontEnd(React on Netlify)
+"https://effortless-rolypoly-6f2c6f.netlify.app/goals"
+### Backend(JSON Server on Render)
+"https://goal-server-1.onrender.com/goals"
+
+
+
 ## Key Concepts Practiced
 
 - `useState`, `useEffect` for React state management and side effects
