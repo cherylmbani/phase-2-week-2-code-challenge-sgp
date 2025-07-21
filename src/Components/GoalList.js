@@ -28,7 +28,7 @@ function GoalList({ goals, onUpdateGoal, onDeleteGoal}) {
 
   function handleSave(goalId) {
     
-    fetch(`http://localhost:3001/goals/${goalId}`, {
+    fetch(`https://goal-server-1.onrender.com/goals/${goalId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -46,7 +46,7 @@ function GoalList({ goals, onUpdateGoal, onDeleteGoal}) {
     const isEditing = goal.id === editingGoalId;
 
     function handleDelete(goalId){
-        fetch(`http://localhost:3001/goals/${goalId}`,{
+        fetch(`https://goal-server-1.onrender.com/goals/${goalId}`,{
             method: "DELETE",
         })
         .then(r=>r.json())

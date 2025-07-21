@@ -22,7 +22,7 @@ function GoalForm ({onAddGoal}){
             savedAmount: Number(formData.savedAmount)
         }
 
-        fetch("http://localhost:3001/goals", {
+        fetch("https://goal-server-1.onrender.com/goals", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

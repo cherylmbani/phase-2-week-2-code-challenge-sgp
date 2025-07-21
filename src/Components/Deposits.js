@@ -19,7 +19,7 @@ function Deposits ({goals, onUpdateGoal}){
         if(!goalToUpdate) return;
         const updatedAmount=Number(goalToUpdate.savedAmount) + Number(depositAmount);
 
-        fetch(`http://localhost:3001/goals/${selectedGoal}`, {
+        fetch(`https://goal-server-1.onrender.com/goals/${selectedGoal}`, {
             method: "PATCH",
             headers: {
                 "Content-Type":"application/json"
